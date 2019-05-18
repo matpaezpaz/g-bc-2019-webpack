@@ -1,0 +1,19 @@
+.modal-dialog{
+    background-color: $bg;
+    position: absolute;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.4);
+    padding: 20px;
+    /* Centrado */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .mpp-button{
+        float: right;
+    }
+    .mpp-button:active {
+        @extend .mpp-button:active;
+        background-color: $primary-color;
+        border: none;
+    }
+}

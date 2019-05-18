@@ -1,7 +1,4 @@
-$primary-color: #2d2b31;
-$bg: #f5f4f0;
-$bg-secondary: #9bccbb;
-$karla: 'Karla', sans-serif;
+@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -101,6 +98,7 @@ body {
   margin: 2rem;
 }
 .form {
+  position: relative;
   margin: 2rem;
   padding: 2rem;
   background-color: $bg-secondary;
@@ -119,10 +117,11 @@ body {
     }
   }
 }
+$form-transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
 .mpp-label{
-  transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: $form-transition;
   input,select,textarea {
-    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: $form-transition;
     outline: none;
     display: block;
     border-width: 0px 0px 2px 0px;
@@ -131,6 +130,7 @@ body {
     background-color: transparent;
     width: 100%;
     font-size: 1.5rem;
+    font-family: $karla;
   }
   &:focus-within{
     color: $bg;
@@ -147,17 +147,17 @@ body {
   border: solid 2px $primary-color;
   background-color: transparent;
   font-weight: bold;
+  outline: none;
+  transition: $form-transition;
+  &:hover {
+    background-color: transparentize($primary-color,0.9);
+  }
+  &:active{
+    color: $bg;
+    border-color: $bg;
+  }
 }
-.mpp-half-size{
-  flex-basis: 50%;
-}
-.mpp-all-size{
-  flex-basis: 100%;
-}
-.text-center { 
-  text-align: center;
-}
-.text-light {
-  font-weight: lighter;
-}
-@import 'media-queries'
+
+@import 'utils';
+@import 'media-queries';
+@import 'modal';
