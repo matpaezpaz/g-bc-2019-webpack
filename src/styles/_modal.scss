@@ -14,6 +14,6 @@
     .mpp-button:active {
         @extend .mpp-button:active;
         background-color: $primary-color;
-        border: none;
+        border-color: rgba(0, 0, 0, 0);
     }
 }
