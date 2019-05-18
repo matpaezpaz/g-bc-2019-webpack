@@ -11,6 +11,7 @@ body {
   color: $primary-color;
   background-color: $bg;
   font-family: $karla;
+  margin: 0px;
 }
 
 .main-header{
@@ -108,13 +109,20 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-end;
     &>*{
       padding: 1rem;
+    }
+    .mpp-button {
+      margin: 0 1rem 0 0;
+      align-self: flex-end;
     }
   }
 }
 .mpp-label{
+  transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
   input,select,textarea {
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
     outline: none;
     display: block;
     border-width: 0px 0px 2px 0px;
@@ -122,11 +130,26 @@ body {
     border-color: $primary-color;
     background-color: transparent;
     width: 100%;
+    font-size: 1.5rem;
   }
+  &:focus-within{
+    color: $bg;
+    input,select,textarea{
+      color: $bg;
+      border-color: $bg;
+    }
+  }
+}
+.mpp-button {
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-family: $karla;
+  border: solid 2px $primary-color;
+  background-color: transparent;
+  font-weight: bold;
 }
 .mpp-half-size{
   flex-basis: 50%;
-  flex-shrink: 2;
 }
 .mpp-all-size{
   flex-basis: 100%;
