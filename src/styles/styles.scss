@@ -3,6 +3,9 @@ $bg: #f5f4f0;
 $bg-secondary: #9bccbb;
 $karla: 'Karla', sans-serif;
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   color: $primary-color;
@@ -102,7 +105,36 @@ body {
   background-color: $bg-secondary;
   width: 100%;
   &__contact-form{
-
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    &>*{
+      padding: 1rem;
+    }
   }
+}
+.mpp-label{
+  input,select,textarea {
+    outline: none;
+    display: block;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: $primary-color;
+    background-color: transparent;
+    width: 100%;
+  }
+}
+.mpp-half-size{
+  flex-basis: 50%;
+  flex-shrink: 2;
+}
+.mpp-all-size{
+  flex-basis: 100%;
+}
+.text-center { 
+  text-align: center;
+}
+.text-light {
+  font-weight: lighter;
 }
 @import 'media-queries'
