@@ -15,4 +15,10 @@ export class MyHTMLElement {
     on(event,callback) {
         this._element.addEventListener(event,callback);
     }
+    getValue() {
+        return this._element.value;
+    }
+    setValue(newValue) {
+        this._element.value = newValue;
+    }
 }

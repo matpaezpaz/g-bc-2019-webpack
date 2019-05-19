@@ -38,7 +38,6 @@ body {
     flex-wrap: nowrap;
     &:nth-child(even) {
       flex-direction: row-reverse;
-
     }
     &>* {
       display: flex;
@@ -47,11 +46,12 @@ body {
       margin: .5rem;
     }
     figure{
+      max-height: 250px;
       img {
-        width: 100%;
+        max-width: 250px;
+        
         object-fit: contain;
-        max-height: 250px;
-        box-shadow: 10px 10px 51px -8px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 21px -8px rgba(0,0,0,0.75);
       }
     }
     article{
@@ -103,7 +103,11 @@ body {
   padding: 2rem;
   background-color: $bg-secondary;
   width: 100%;
+  display:flex;
+  flex-direction: column;
   &__contact-form{
+    align-self: center;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -152,7 +156,7 @@ $form-transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
   &:hover {
     background-color: transparentize($primary-color,0.9);
   }
-  &:active{
+  &:active,&:focus{
     color: $bg;
     border-color: $bg;
     background-color: transparent;
