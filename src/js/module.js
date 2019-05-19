@@ -23,4 +23,5 @@ myform.submit((event) => {
     persistencia.guardarContacto(obj);
     console.log(obj);
     myform.reset();
+    modal.show();
 });
