@@ -2,6 +2,7 @@ import { Form } from "./UIElements/Form";
 import { Modal } from "./UIElements/Modal";
 import { Persistencia } from "./Persistencia";
 import { StorageService } from "./StorageService";
+import { Input } from "./UIElements/Input";
 
 
 const myform = new Form("form");
@@ -21,4 +22,5 @@ myform.submit((event) => {
     }
     persistencia.guardarContacto(obj);
     console.log(obj);
+    myform.reset();
 });

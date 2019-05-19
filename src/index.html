@@ -64,18 +64,18 @@
       </h3>
       <form id="form" name="contact" class="form__contact-form">
         <label class="mpp-label mpp-half-size" for="name">Name
-          <input type="text" id="name" name="name">
+          <input required type="text" id="name" name="name">
         </label>
         <label class="mpp-label mpp-half-size" for="email">Email
-          <input type="text" id="email" name="email">
+          <input required type="text" id="email" name="email">
         </label>
         <label class="mpp-label mpp-all-size" for="technology">Your Technology
-          <input type="text" id="technology" name="technology">
+          <input required type="text" id="technology" name="technology">
         </label>
         <label class="mpp-label mpp-all-size" for="message">Message
           <textarea name="message" id="message" cols="30" rows="3"></textarea>
         </label>
-        <input type="submit" value="Send" class="mpp-button">
+        <input required type="submit" value="Send" class="mpp-button">
       </form>
       <div role="dialog" id="modal-dialog" aria-modal="true" class="modal-dialog hidden">
         <h2>Thank you for contacting us</h2>

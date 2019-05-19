@@ -21,4 +21,10 @@ export class MyHTMLElement {
     setValue(newValue) {
         this._element.value = newValue;
     }
+    reset() {
+        this._element.reset();
+    }
+    checkValidity() {
+        this._element.checkValidity();
+    }
 }
