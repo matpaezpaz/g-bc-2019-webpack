@@ -1,17 +1,14 @@
-import { Form } from "./Form";
-import { Modal } from "./Modal";
+import { Form } from "./UIElements/Form";
+import { Modal } from "./UIElements/Modal";
+import { Persistencia } from "./Persistencia";
+import { StorageService } from "./StorageService";
 
 
 const myform = new Form("form");
 const modal = new Modal("modal-dialog");
 
-const contactInfo = localStorage.getItem("contactInfo");
-
-
-function submitForm( event ) {
-    event.preventDefault();
-    event.stopPropagation();
-}
+const storageService = new StorageService("contactInfo");
+const persistencia = new Persistencia(storageService);
 
 myform.submit((event) => {
     event.preventDefault();
@@ -22,5 +19,6 @@ myform.submit((event) => {
         technology: myform._technology.getValue(),
         message: myform._message.getValue()
     }
+    persistencia.guardarContacto(obj);
     console.log(obj);
 });
