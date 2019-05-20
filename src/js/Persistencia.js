@@ -2,9 +2,9 @@ export class Persistencia {
     constructor (storageService) {
         this._storageService = storageService;
     };
-    guardarContacto(contacto) {
-        let contactos = this._storageService.getArray();
-        contactos.push(contacto);
-        this._storageService.setArray(contactos);
+    saveContactInfo(contactInfo) {
+        let contactInfos = this._storageService.getArray();
+        contactInfos.push(contactInfo);
+        this._storageService.setArray(contactInfos);
     }
 }

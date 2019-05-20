@@ -27,4 +27,7 @@ export class MyHTMLElement {
     checkValidity() {
         this._element.checkValidity();
     }
+    getName() {
+        return this._element.name;
+    }
 }

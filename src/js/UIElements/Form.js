@@ -12,4 +12,9 @@ export class Form extends MyHTMLElement{
     get(name) {
         return this["_"+name].value;
     }
+    getInputValues() {
+        let obj = {};
+        this._inputs.forEach( input => obj[input.getName()]=input.getValue() );
+        return obj;
+    }
 }
