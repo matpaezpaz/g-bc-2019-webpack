@@ -15,7 +15,10 @@ export class Modal extends MyHTMLElement{
         this.addClass("hidden");
     }
     setCloseButton() {
-        this._closeButton = this._element.querySelector("[data-action=\"close\"]");
-        this._closeButton.addEventListener('click', (event) => this.hide());
+        this._closeButton = this.selector("[data-action=\"close\"]");
+        this._closeButton.addEventListener('click', (event) => this.onClose());
+    }
+    onClose() {
+        this.hide();
     }
 }

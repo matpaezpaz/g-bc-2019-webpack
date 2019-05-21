@@ -30,4 +30,10 @@ export class MyHTMLElement {
     getName() {
         return this._element.name;
     }
+    selectorAll(selector) {
+        return this._element.querySelectorAll(selector);
+    }
+    selector(selector) {
+        return this._element.querySelector(selector);
+    }
 }
