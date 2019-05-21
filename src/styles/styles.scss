@@ -41,14 +41,14 @@ body {
     }
     &>* {
       display: flex;
-      flex: 0 0 50%;
-      max-width: 50%;
+      flex: 1 1 50%;
       margin: .5rem;
     }
     figure{
-      max-height: 250px;
+      max-height: 400px;
+      justify-content: center;
       img {
-        max-width: 250px;
+        max-width: 400px;
         
         object-fit: contain;
         box-shadow: 5px 5px 21px -8px rgba(0,0,0,0.75);
